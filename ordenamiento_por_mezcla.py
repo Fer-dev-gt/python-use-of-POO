@@ -5,7 +5,7 @@ import random
 def ordenamiento_por_mezcla(lista):
     """Esta parte de la función tiene complejidad algoritmica de 'O(log n)'"""
     if len(lista) > 1:                                          # Si la lista es de 1 elemento entonces por definicion ya esta ordenada
-        medio = len(lista) // 2
+        medio = len(lista) // 2                                 # Dividimos la lista a la mitad con "Floor Division"
         # Aplicamos "slicing", creamos 2 listas
         izquierda = lista[:medio]                               # Dividimos una lista a la mitad (valor de "medio"), es el lado izquierdo
         derecha = lista[medio:]                                 # Hacemos otra lista pero que comienza del valor de "medio"
@@ -22,16 +22,16 @@ def ordenamiento_por_mezcla(lista):
         k = 0   # lista "lista", sera el indice de la lista principal
 
         """Esta parte de la función tiene complejidad algoritmica de 'O(n)'"""
-        # Ciclo para compara el valor de la izquierda con el de la derecha
-        while i < len(izquierda) and j < len(derecha):
-            if izquierda[i] < derecha[j]:
+        # Ciclo para comparar el valor de la izquierda con el de la derecha
+        while i < len(izquierda) and j < len(derecha):          # Esto nos asegura que podamos hacer comparacion entre las listas
+            if izquierda[i] < derecha[j]:                       # Comparamos cual valor de lista es mayor
                 lista[k] = izquierda[i]                         # El valor de la izquierda es menor al de la derecha, la agregamos a lista principal
                 i += 1
             else: 
                 lista[k] = derecha[j]                           # Paso el valor de la derecha a la izquierda porque es menor al valor de la derecha
                 j += 1                                          
 
-            k += 1                                              # Aumentas "k", que seria el indice de la lista principal
+            k += 1                                              # Aumentas "k", que seria el del indice de la lista principal
         
         # Solo uno de los dos siguentes ciclos se cumplira
         # Ciclo para
