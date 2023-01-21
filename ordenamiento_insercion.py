@@ -8,8 +8,8 @@ def ordenamiento_por_insercion(lista):
         posicion_actual = indice                                                                        # Lo usaremos para comparar los valores ubicados en los indices que hace referencia
 
         # Se cumplen las 2 condiciones, cuando "posicion_actual" es 0 llegamos al inicio de la lista
-        while posicion_actual > 0 and lista[posicion_actual - 1] > valor_actual:                        # Si el valor de la lista ordenada es mayor al primer valor de la lista desordenada
-            lista[posicion_actual] = lista[posicion_actual - 1]                                         # Paso el valor a la derecha, hacemo "Swaping"
+        while posicion_actual > 0 and lista[posicion_actual - 1] > valor_actual:                        # Si el primer valor de la lista desordenada es mayor al de la lista ordenada
+            lista[posicion_actual] = lista[posicion_actual - 1]                                         # Paso el valor a la derecha, hacemos "Swaping"
             posicion_actual -= 1                                                                        # Corremos el indice a la izquierda, vamos para atras
             
         lista[posicion_actual] = valor_actual                                                           # Guardamos el valor en el indice que nos dio "posicion_actual" segun las comparaciones
