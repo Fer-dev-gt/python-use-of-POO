@@ -5,7 +5,7 @@ def ordenamiento_de_burbujas(lista):
     list_length = len(lista)
 
     for i in range(list_length):
-        for j in range(0, list_length - i - 1):                               # Posicion final: Tamaño de lista - lo que ya recorrimos - 1 (index, off by one)
+        for j in range(0, list_length - i - 1):                     # Posicion final: Tamaño de lista - lo que ya recorrimos - 1 (index, off by one)
             #print(i, j)                                            # para ver ciclos anidados
             if lista[j] > lista [j + 1]:                            # Comparamos lugar en "j" con su valor a la derecha "j + 1"
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]     # Realizo el intercambio "Swaping" (valor e index)
